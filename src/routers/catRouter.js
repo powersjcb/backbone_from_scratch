@@ -1,15 +1,20 @@
 import Router from './base.js';
+import BackboneViews from '../views/index.js';
 
-export default class AppRouter extends Router {
+export default class CatRouter extends Router {
+
+  constructor(options) {
+    super(options);
+  }
 
   routes: {
     "" : "root"
   }
 
   root() {
-    const catView = new BackboneViews.CatViews();
+    const catView = new BackboneViews.CatShow({});
 
-    _swapView(catView);
+    this._swapView(catView);
   }
 
   _swapView(view) {

@@ -14,7 +14,7 @@ class CatView extends BackboneView {
 
   render() {
     const viewData = {text: 'Some strings to output'};
-    const content = template(viewData);
+    const content = this.template(viewData);
 
     // remove old content and listeners first?
     this.el.innerHTML = content;

@@ -3,21 +3,17 @@ import _ from 'lodash';
 
 export default class View extends Backbone {
 
-  constructor(options) {
+  constructor() {
     super();
-
-    this.model = options.model;
-    this.collection = options.collection;
-
     // reasonable view defaults
     if (!this.tagName) {
       this.tagName = 'div';
     }
 
-    if (!this.className) {
+    if (typeof this.className === 'undefined') {
       this.className = '';
     }
-    this._classNames = _(className.split(' '));
+    this._classNames = _(this.className.split(' '));
 
 
     // create html elements that will be filled by template

@@ -1,17 +1,21 @@
 import Backbone from '../Backbone.js';  // used to create app
-import BackboneViews from '../views/index.js'; // imports views
-import BackboneModels from '../models/index.js';  // imports models
-import BackboneCollections from '../collections/index.js'; // imports collections
-// import BackboneRoutes from '../collections/index.js'; // imports collections
+import Routers from '../routers/index.js';
 
 const rootElement = document.getElementById('content');
-const BackboneApp = new Backbone({
-  rootElement: rootElement,
-  views: BackboneViews,
-  models: BackboneModels,
-  collections: BackboneCollections,
-  // routes: BackboneRoutes
-});
 
+class App {
+  Views: {}
+  Models: {}
+  Collections: {}
+  Routers: {}
+
+  constructor() {
+    this.router = new Routers.CatRouter({
+      rootElement: rootElement
+    });
+  }
+}
+
+const BackboneApp = new App();
 
 export default BackboneApp;

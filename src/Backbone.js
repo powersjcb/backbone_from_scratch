@@ -1,9 +1,3 @@
-export default class Backbone {
-  constructor(options) {
-    this.rootElement = options.rootElement;
-    this.routes = options.routes           || {};
-    this.views = options.views             || {};
-    this.models = options.models           || {};
-    this.collections = options.collections || {};
-  }
-}
+// BASE Class for all backbone objects
+// TODO: include global helper functions
+export default class Backbone {}
