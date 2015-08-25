@@ -4,7 +4,9 @@ import BackboneModels from '../models/index.js';  // imports models
 import BackboneCollections from '../collections/index.js'; // imports collections
 // import BackboneRoutes from '../collections/index.js'; // imports collections
 
+const rootElement = document.getElementById('content');
 const BackboneApp = new Backbone({
+  rootElement: rootElement,
   views: BackboneViews,
   models: BackboneModels,
   collections: BackboneCollections,
